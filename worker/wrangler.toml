@@ -1,0 +1,6 @@
+name = "sara-wellness-worker"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Set your ANTHROPIC_API_KEY secret via:
+#   wrangler secret put ANTHROPIC_API_KEY
