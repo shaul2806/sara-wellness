@@ -15,6 +15,22 @@
 
     
   </head>
+  
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sara-wellness/sw.js')
+      .then(reg => {
+        reg.addEventListener('updatefound', () => {
+          const newSW = reg.installing;
+          newSW.addEventListener('statechange', () => {
+            if (newSW.state === 'activated') window.location.reload();
+          });
+        });
+      });
+  }
+</script>
+
+  
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
