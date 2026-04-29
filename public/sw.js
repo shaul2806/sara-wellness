@@ -1,4 +1,4 @@
-const CACHE = "sara-v1";
+const CACHE = "sara-v2";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
